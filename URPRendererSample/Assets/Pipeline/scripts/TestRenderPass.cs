@@ -8,8 +8,7 @@ namespace Pipeline.Test
     {
         private const string Tag = nameof(TestRenderPass);
         private RenderTargetIdentifier _currentTarget;
-
-/*        public float _ratio;*/
+        
         public int _invBool;
 
         public void SetUp(RenderTargetIdentifier target)
@@ -26,7 +25,6 @@ namespace Pipeline.Test
             var w = cameraData.camera.scaledPixelWidth;
             var h = cameraData.camera.scaledPixelHeight;
             
-            /*material.SetFloat("_ratio", _ratio);*/
             material.SetInt("_invBool", _invBool);
             
             if (_invBool == 0)
