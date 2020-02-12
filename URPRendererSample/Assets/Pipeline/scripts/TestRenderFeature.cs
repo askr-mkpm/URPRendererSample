@@ -14,7 +14,7 @@ namespace Pipeline.Test
             if(_scriptablePass == null)
                 _scriptablePass = new TestRenderPass();
 
-            _scriptablePass.renderPassEvent = RenderPassEvent.AfterRenderingOpaques;
+            _scriptablePass.renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
         }
         
         public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
