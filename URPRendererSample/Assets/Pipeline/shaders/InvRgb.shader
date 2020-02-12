@@ -3,7 +3,7 @@
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _ratio("ratio", Range(0,1)) =1
+        [KeywordEnum(Off, On)] _InvBool("InvBool", int) = 0
     }
     SubShader
     {
@@ -39,13 +39,19 @@
             }
 
             sampler2D _MainTex;
-            float _ratio;
+            
+            #pragma shader_feature _INVBOOL_OFF _INVBOOL_ON
 
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
-                // just invert the colors
-                col.rgb = _ratio - col.rgb;
+                
+                #ifdef _INVBOOL_ON
+                    col.rgb = 1 - col.rgb;
+                #else
+                    col = col;
+                #endif
+                
                 return col;
             }
             ENDCG
