@@ -47,4 +47,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce8d540d0cfff4bbcfd18a102dd1bd, type: 3}
   m_Name: NewTestRenderFeature
   m_EditorClassIdentifier: 
-  invBool: 0
+  invBool: 1
