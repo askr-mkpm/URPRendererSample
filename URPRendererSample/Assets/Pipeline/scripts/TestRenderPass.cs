@@ -2,7 +2,7 @@
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-namespace Pipeline.Test
+namespace Pipeline.Sample
 {
     public class TestRenderPass : ScriptableRenderPass
     {
